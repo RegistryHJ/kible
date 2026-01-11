@@ -166,10 +166,10 @@
 
   <tr>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/KibleLab/kible/main/assets/images/image-001.png" width="90%" alt="POS Main Page">
+      <img src="https://raw.githubusercontent.com/RegistryHJ/kible/main/assets/images/image-001.png" width="90%" alt="POS Main Page">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/KibleLab/kible/main/assets/images/image-002.png" width="90%" alt="Menu Manage Page">
+      <img src="https://raw.githubusercontent.com/RegistryHJ/kible/main/assets/images/image-002.png" width="90%" alt="Menu Manage Page">
     </td>
   </tr>
   <tr>
@@ -178,10 +178,10 @@
   </tr>
   <tr>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/KibleLab/kible/main/assets/images/image-003.png" width="90%" alt="Menu Select & Cart Page">
+      <img src="https://raw.githubusercontent.com/RegistryHJ/kible/main/assets/images/image-003.png" width="90%" alt="Menu Select & Cart Page">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/KibleLab/kible/main/assets/images/image-004.png" width="90%" alt="Order Sheet & Payment Page">
+      <img src="https://raw.githubusercontent.com/RegistryHJ/kible/main/assets/images/image-004.png" width="90%" alt="Order Sheet & Payment Page">
     </td>
   </tr>
 </table>
@@ -197,13 +197,13 @@
   
   <tr>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/KibleLab/kible/main/assets/images/image-005.png" width="95%" alt="Menu Select Page">
+      <img src="https://raw.githubusercontent.com/RegistryHJ/kible/main/assets/images/image-005.png" width="95%" alt="Menu Select Page">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/KibleLab/kible/main/assets/images/image-006.png" width="95%" alt="Cart Page">
+      <img src="https://raw.githubusercontent.com/RegistryHJ/kible/main/assets/images/image-006.png" width="95%" alt="Cart Page">
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/KibleLab/kible/main/assets/images/image-007.png" width="95%" alt="Order Sheet Page">
+      <img src="https://raw.githubusercontent.com/RegistryHJ/kible/main/assets/images/image-007.png" width="95%" alt="Order Sheet Page">
     </td>
   </tr>
 </table>
@@ -360,13 +360,13 @@
 
 ## ER-Diagram
 
-![](https://raw.githubusercontent.com/KibleLab/kible/main/assets/images/image-008.svg)
+![](https://raw.githubusercontent.com/RegistryHJ/kible/main/assets/images/image-008.svg)
 
 <br />
 
 ## System Architecture
 
-![](https://raw.githubusercontent.com/KibleLab/kible/main/assets/images/image-009.svg)
+![](https://raw.githubusercontent.com/RegistryHJ/kible/main/assets/images/image-009.svg)
 
 ## Team
 
@@ -381,6 +381,25 @@
   </tr>
 </table>
 
-# <br />
+<br />
 
-Copyright © 2021 KibleLab. All rights reserved.
+## My Role
+
+- 프로젝트 일정 관리 및 조율 (Daily Scrum Meeting, 회의록 작성 등)
+- Figma를 활용해 POS, Mobile의 UI/UX 프로토타입 제작.
+- Full-stack 아키텍처 설계 및 기술 스택 선정
+- React로 POS 시스템 및 Mobile 주문 사이트 구현, Express로 Server 구현
+- Socket.IO로 Server-POS, Server-Mobile 간 실시간 양방향 통신 구현
+- AWS EC2에 NGINX Reverse Proxy 및 SSL(Let’s Encrypt) 적용하여 배포
+- Docker로 Database 컨테이너화 및 AWS EC2 배포
+- AWS EC2 보안 그룹 및 서버 보안 정책 관리
+
+<br />
+
+## 느낀 점
+
+첫 프로젝트였던 Kible은 음식점 주문이 들어와서 처리되기까지의 과정을 직접 구현해 본 경험이었습니다. 점주가 POS로 주문을 확인하고, 고객이 모바일로 추가 주문을 하는 실제 사용 흐름을 그려보면서 단순히 기능을 붙이는 게 아니라 사용자 맥락에 맞춰 설계해야 한다는 걸 배웠습니다.
+
+Figma로 화면 구조를 잡고 ERD를 그리면서 “어떤 화면에 어떤 데이터가 필요한가”를 먼저 정의했고, 그 과정에서 주문 내역처럼 즉시 확인이 필요한 데이터는 Socket.IO로 실시간 푸시하고 메뉴 조회처럼 변경 빈도가 낮은 데이터는 REST API로 처리하는 식으로 통신 방식을 나눴습니다. 이론으로만 알던 실시간 통신과 HTTP의 차이를 실제 사용 시나리오에 맞춰 적용해 보는 기회였습니다.
+
+배포 단계에서는 NGINX 설정 하나가 잘못되어도 서비스 전체가 멈춘다는 걸 직접 겪으면서 코드를 잘 짜는 것만큼이나 안정적으로 운영하는 것도 중요하다는 걸 체감했습니다. PM 역할을 병행하면서는 두 명이서 11개월 안에 무엇까지 구현할 수 있을지 현실적으로 판단하고 우선순위를 조율하는 연습을 했는데, 설계나 코드 품질 면에서 아쉬운 부분도 많았지만 서비스를 처음부터 끝까지 만들어 본 경험이 이후 프로젝트의 기준이 되었습니다.
